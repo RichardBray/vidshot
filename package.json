@@ -1,0 +1,14 @@
+{
+  "name": "vidshot",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "vidshot": "./src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
