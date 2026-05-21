@@ -151,7 +151,7 @@ async function screenshot() {
     const text = values.highlight.replace(/'/g, "\\'");
     const result = await $`agent-browser eval ${`
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-      const normalize = s => s.replace(/[‘’′]/g, "'").replace(/[“”]/g, '"').replace(/—/g, '--').replace(/–/g, '-');
+      const normalize = s => s.replace(/[‘’′]/g, "'").replace(/[“”]/g, '"').replace(/—/g, '--').replace(/–/g, '-').replace(/×/g, 'x').toLowerCase();
       const target = normalize('${text}');
       while (walker.nextNode()) {
         const node = walker.currentNode;
